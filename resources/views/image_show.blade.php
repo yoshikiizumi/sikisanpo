@@ -1,0 +1,37 @@
+@extends('layouts.helloapp')
+<head>
+  <button id="square_btn" onClick="history.back()">戻る</button>
+</head>
+<style>
+  .pagination { font-size:10px; }
+  .pagination li { display:inline-block }
+  tr th a:link { color:white; }
+  tr th a:visited { color:white; }
+  tr th a:hover { color:white; }
+  tr th a:active { color:white; }
+</style>
+
+
+@section('menubar')
+  @parent
+  詳細ページ
+@endsection
+
+@section('content')
+  <table>
+    @csrf
+    <input type="hidden" name="id" value="{{$item->id}}">
+    <tr><th>写真 </th><td><a href="{{$item->path}}" data-lightbox="group" width="200" height="130"><img src="{{$item->path}}" width="200" height="130"></td></tr>
+    <tr><th>名前 </th><td>{{$item->product_name}}</td></tr>
+    <tr><th>季節 </th><td>{{$item->season}}</td></tr>
+    <tr><th>共有 </th><td>
+      <div class="fb-share-button" data-href="https://jannepiirainen.github.io/shikisanpowelcometest/everest.html" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">facebook</a> / 
+      
+      <a class="twitter-share-button"
+      href="https://twitter.com/intent/tweet?text=Shikisanpoppu%20konnichiwa&url=https://jannepiirainen.github.io/shikisanpowelcometest/everest.html"url="wikipedia.org">
+      twitter</a></div></td>
+    </tr>
+  </table>  
+@endsection
+
+
