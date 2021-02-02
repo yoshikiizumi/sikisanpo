@@ -9,10 +9,12 @@ use Auth;
 class Jissyu3_1Controller extends Controller
 {
     public function index(){
+        if(Auth::check()){
             return view('jissyu3_1.input');
-        
+        }else{
+            return view('auth/login');
         }
-    
+    }
 
 
     public function index2(){
