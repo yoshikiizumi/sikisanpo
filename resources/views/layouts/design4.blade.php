@@ -44,6 +44,8 @@
 .mypage img{
   margin:10px;
   float:left;
+  position:fixed;
+  
 }
 
 .box3 {
