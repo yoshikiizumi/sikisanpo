@@ -12,6 +12,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\Jissyu3_1Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,7 +81,8 @@ Route::post('/person/auth', [PersonController::class, 'postAuth']);
 
 
 
-Route::get('jissyu3','App\Http\Controllers\Jissyu3_1Controller@index');
+//Route::get('jissyu3','App\Http\Controllers\Jissyu3_1Controller@index');
+Route::get('/jissyu3', [Jissyu3_1Controller::class, 'index']);
 
 Route::get('rewardpage','App\Http\Controllers\Jissyu3_1Controller@index2');
 
