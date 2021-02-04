@@ -20,6 +20,18 @@ function initMap() {
             zoom: 20
         });
  
+        // マーカーの追加
+        marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+        });
+        
+        infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+        content: '<img src="/storage/image.jpg">' // 吹き出しに表示する内容
+        });
+        marker.addListener('click', function() { // マーカーをクリックしたとき
+        infoWindow.open(map, marker); // 吹き出しの表示
+        });
     }, function() {
         alert('位置情報取得に失敗しました');
     });

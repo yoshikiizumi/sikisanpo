@@ -1,6 +1,6 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\MapController;
