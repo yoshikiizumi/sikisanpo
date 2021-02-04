@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class HelloaController extends Controller
 {
     public function indexa(){
-            return view('helloa');
+
+            $data = DB::select('select * from products');
+            return view('indexa', ['data' => $data]);
+    
     }
-     
 }
