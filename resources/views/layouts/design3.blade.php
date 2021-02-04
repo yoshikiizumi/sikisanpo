@@ -4,6 +4,8 @@
 
 <header>
 
+
+
   <div class="hamburger-menu">
         <input type="checkbox" id="menu-btn-check">
         <label for="menu-btn-check" class="menu-btn"><span></span></label>
@@ -32,13 +34,15 @@
 .mypage img{
   margin:10px;
   float:left;
+  position:fixed;
+  
 }
 
 .box3 {
   display:inline-block;
-  width:30%;
+  width:400px;
   padding:0.5em; 1em;
-  margin:40px 30px;
+  margin:40px 150px;
   font-weight:bold;
   color:#000;
   background:#fff;
@@ -241,6 +245,7 @@ html, body {
 	flex-wrap:wrap;
   position:fixed;
   bottom:0%;
+  left:8%;
 }
 
 .box > li {

@@ -37,8 +37,12 @@ class ImageController extends Controller
         return redirect('/image_input');
     }
 
-    public function getImageInput(){
-        $items = DB::select('select * from products');
+    public function getImageInput(Request $request){
+        $sort = $request->sort;
+        if (is_null($sort)) {
+            $sort = 'id';
+        }
+        $items = DB::table('products')->orderBy($sort, 'asc')->paginate(5);
         return view('image_input', ['items' => $items]);
     }
 

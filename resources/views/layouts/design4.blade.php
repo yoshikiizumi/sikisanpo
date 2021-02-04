@@ -52,7 +52,7 @@
   display:inline-block;
   width:30%;
   padding:0.5em; 1em;
-  margin:40px 30px;
+  margin:40px 150px;
   font-weight:bold;
   color:#000;
   background:#fff;
@@ -255,6 +255,7 @@ html, body {
 	flex-wrap:wrap;
   position:fixed;
   bottom:0%;
+  left:9%;
 }
 
 .box > li {

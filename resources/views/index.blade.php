@@ -1,4 +1,4 @@
-@extends('layouts.design')
+@extends('layouts.design3')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -7,18 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--小さい日本地図-->
-    <div>
-        <a type="button" href="./index2" class="map2"></a>
-    </div>
+   
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <header>
+
+    <div class="mypage">
+  <a href ="./mypage"><img src="../image/人物.png"></a>
+
+</div>
+    <div class="box3">
+  <p><span style="font-size:1.5em"><?php $user = Auth::user(); ?>{{ $user->name }} </span>さん</p>
+  </div>
+    </header>
 
 
 </head>
 
 
 <script>
+
+
     function initMap() {
 
         <?php foreach ($data as $blog) : ?>
@@ -36,17 +46,18 @@
 
 
 
-
+        let tokyo = {lat:35.658,lng:139.745}
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: id1,
+            zoom: 10,
+            center: tokyo,
         });
+        
 
 
         <?php foreach ($data as $blog) : ?>
             <?php echo "const contentStringid" . $blog->id . " =" ?>
             <?php echo "'<h1>" . $blog->product_name . "</h1>' +" ?>
-            <?php echo '\'<img src="' . $blog->path . '" width="200" height="200">\';'?>
+            <?php echo '\'<img src="' . $blog->path . '" width="300" height="300">\';'?>
         <?php endforeach; ?>
         //上のコードはこの形式のデータを繰り返して作成する
         //const contentStringid68 =
@@ -108,12 +119,11 @@
 
 
 <body>
-    <h1>MAP</h1>
     <!--<pre>
     <?php var_dump($data) ?>
     </pre>-->
-    <h3>プレイヤー名:　<?php $user = Auth::user(); ?>{{ $user->name }}｜<a href="/image_input">マイページ</a></h3>
-    <div id="map" style="height:750px">
+    
+    <div id="map" style="height:1300px; width:1000px; top:10%;">
     </div>
 </body>
 
@@ -133,6 +143,10 @@
 
 <!-- Styles -->
 <style>
+    .map{
+        
+    }
+    
     .map2 {
         position: fixed;
         width: 600px;
@@ -204,8 +218,6 @@
     .m-b-md {
         margin-bottom: 30px;
     }
-
-    /*ハンバーガーメニュー下準備*/
 </style>
 
 </html>

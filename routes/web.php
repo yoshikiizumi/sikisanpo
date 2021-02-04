@@ -13,6 +13,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\Jissyu3_1Controller;
+use App\Http\Controllers\MainpageController;
 
 /*
 |--------------------------------------------------------------------------

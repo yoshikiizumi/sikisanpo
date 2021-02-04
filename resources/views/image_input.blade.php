@@ -77,7 +77,7 @@
   <input type="text" name="product_name" size="50" value="{{ old('name') }}" required/><br /><br />
 
   季節：
-  <label><input type="radio" value="春" name="season" required>春</label>
+  <label><input type="radio" value="春" name="season" checked>春</label>
   <label><input type="radio" value="夏" name="season">夏</label>
   <label><input type="radio" value="秋" name="season">秋</label>
   <label><input type="radio" value="冬" name="season">冬</label><br><br>
@@ -89,9 +89,15 @@
   <input type="submit" name="confirm" value="確認" />
 </form>
 <table>
+<select onChange="location.href=value;">
+    <option value="/image_input?sort=path">写真</a></th>
+    <option value="/image_input?sort=product_name">花の名前</a></th>
+    <option value="/image_input?sort=season">季節</a>
+    <option value="/image_input?sort=cityName">町名</a>
+  </select>
   <tr>
     <th>写真</a></th>
-    <th>名前</a></th>
+    <th>花の名前</a></th>
     <th>季節</a></th>
     <th>町名</a></th>
     <th>詳細</a></th>
@@ -108,7 +114,7 @@
   </tr>
   @endforeach
 </table>
-
+{{$items->links('pagination::default')}}
 @endsection
 
 
