@@ -116,4 +116,4 @@ Route::post('contacts/complete', [ContactsController::class, 'complete'])->name(
 
 
 
-Route::get('indexa','App\Http\Controllers\HalloaController@index');
+Route::get('indexa','App\Http\Controllers\HelloaController@indexa');
