@@ -14,6 +14,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\Jissyu3_1Controller;
 use App\Http\Controllers\MainpageController;
+use App\Http\Controllers\HelloaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,3 +113,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('contacts', [ContactsController::class, 'index'])->name('contact.index');
 Route::post('contacts/confirm', [ContactsController::class, 'confirm'])->name('contact.confirm');
 Route::post('contacts/complete', [ContactsController::class, 'complete'])->name('contact.complete');
+
+
+
+Route::get('indexa','App\Http\Controllers\HalloaController@index');
