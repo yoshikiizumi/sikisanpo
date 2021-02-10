@@ -202,4 +202,23 @@ class ImageController extends Controller
         $items = DB::select('select * from products');
         return view('image_complete', ['items' => $items]);
     }*/
+    
+    public function search(Request $request) {
+        $sort = $request->sort;
+        if (is_null($sort)) {
+            $sort = 'id';
+        }
+        $items = DB::table('products')->orderBy($sort, 'asc')->paginate(5);
+        $selects = array(
+          '/image_search?sort=path',
+          '/image_search?sort=product_name',
+          '/image_search?sort=season',
+        );
+        return view('image_search')->with([
+            'items' => $items,
+            'selects' => $selects,
+        ]);
+    }
+
+
 }

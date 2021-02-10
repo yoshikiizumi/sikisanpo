@@ -1,25 +1,20 @@
 <html>
 <head>
-<title>Jissyu/Index</title>
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
 @csrf
-  <h1>Blade/Index</h1>
-  <p>{{$msg}}</p>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">1ページ目</div>
-      <div class="swiper-slide">2ページ目</div>
-      <div class="swiper-slide">3ページ目</div>
+      <div class="swiper-slide"><img src="image/s1.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/s2.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/s3.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/s4.png" alt=""></div>
     </div>
-    <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-scrollbar"></div>
-  <div class="swiper-button-prev swiper-button-white"></div>
-  <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-pagination swiper-pagination-black"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
@@ -31,6 +26,7 @@ var mySwiper = new Swiper('.swiper-container', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true ,
   },
 
   // Navigation arrows
@@ -43,7 +39,15 @@ var mySwiper = new Swiper('.swiper-container', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
 })
 </script> 
+<div style="text-align: right;">
+<h2>スライドして次へ</h2>
+</div>
+<div style="margin-bottom:35px"></div>
+<div style="text-align: center;">
+<a href="/indexa" class="btn-flat-simple">マップ画面へ</a>
+</div>
     </body>
     <html>

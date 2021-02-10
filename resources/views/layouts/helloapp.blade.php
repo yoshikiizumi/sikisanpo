@@ -229,7 +229,7 @@ html, body {
       <div class="a">アルバム</div>
     !-->
       <div class="box">
-        <tr><a type="button" href="./index" class="map"></a></tr>
+        <tr><a type="button" href="./indexa" class="map"></a></tr>
         <tr><a type="button" href="./sendtestpage" class="camera"></a></tr>
         <tr><a type="button" href="./image_input" class="gallery"></a></tr>
       </div>

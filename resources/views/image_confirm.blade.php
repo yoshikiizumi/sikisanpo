@@ -27,10 +27,17 @@
                 <td>{{ $data['product_name'] }}</td>
             </tr>
             <tr>
-                <td>季節</td>
-                <td>{{ $data['season'] }}</td>
-            </tr>
-            <tr>
+   <td>季節</td>
+   	@if($data['season'] == 0)
+            <td>春</td>
+        @elseif($data['season'] == 1)
+            <td>夏</td>
+        @elseif($data['season'] == 2)
+            <td>秋</td>
+        @else
+            <td>冬</td>
+        @endif
+</tr>
                 <td>緯度</td>
                 <td>{{ $data['latitude'] }}</td>
             </tr>

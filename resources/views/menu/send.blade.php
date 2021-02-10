@@ -1,4 +1,4 @@
-@extends('layouts.design')
+@extends('layouts.design2')
 <!DOCTYPE html>
 <html>
 <head>

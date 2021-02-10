@@ -12,7 +12,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Controllers\ContactsController;
-use App\Http\Controllers\Jissyu3_1Controller;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\MainpageController;
 use App\Http\Controllers\HelloaController;
 
@@ -84,15 +84,15 @@ Route::post('/person/auth', [PersonController::class, 'postAuth']);
 
 
 //Route::get('jissyu3','App\Http\Controllers\Jissyu3_1Controller@index');
-Route::get('/jissyu3', [Jissyu3_1Controller::class, 'index']);
+Route::get('/tuto', [MenuController::class, 'index']);
 
-Route::get('rewardpage','App\Http\Controllers\Jissyu3_1Controller@index2');
+Route::get('reward','App\Http\Controllers\MenuController@index2');
 
 //Route::get('sendpage','App\Http\Controllers\Jissyu3_1Controller@index3');
 
-Route::get('sendtestpage','App\Http\Controllers\Jissyu3_1Controller@index4');
+Route::get('send','App\Http\Controllers\MenuController@index3');
 
-Route::get('mypage','App\Http\Controllers\Jissyu3_1Controller@index5');
+Route::get('mypage','App\Http\Controllers\MenuController@index4');
 
 
 Route::get('index','App\Http\Controllers\MainpageController@index');
@@ -114,6 +114,8 @@ Route::get('contacts', [ContactsController::class, 'index'])->name('contact.inde
 Route::post('contacts/confirm', [ContactsController::class, 'confirm'])->name('contact.confirm');
 Route::post('contacts/complete', [ContactsController::class, 'complete'])->name('contact.complete');
 
+
+Route::get('/image_search', [ImageController::class, 'search']);
 
 
 Route::get('indexa','App\Http\Controllers\HelloaController@indexa');

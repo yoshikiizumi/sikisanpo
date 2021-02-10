@@ -5,7 +5,7 @@
   padding: 20px 0;
   height: 33vw;
   max-height: 600px; 
-  min-height: 400px; 
+  min-height: 1500px; 
 }
 
 
@@ -34,19 +34,19 @@
   justify-content: center; 
 }
 .swiper-slide:nth-child(4n+1) {
-	background-color: #ffe4c4;
+	background-image:url('../image/wood-texture_00135.jpg');
 }
 /* 4の倍数＋2枚目のスライドのスタイル（2枚目、6枚目…） */
 .swiper-slide:nth-child(4n+2) {
-	background-color: #ffe4c4;
+	background-image:url('../image/wood-texture_00135.jpg');
 }
 /* 4の倍数＋3枚目のスライドのスタイル（3枚目、7枚目…） */
 .swiper-slide:nth-child(4n+3) {
-	background-color: #ffe4c4;
+	background-image:url('../image/wood-texture_00135.jpg');
 }
 /* 4の倍数＋4枚目のスライドのスタイル（4枚目、8枚目…） */
 .swiper-slide:nth-child(4n+4) {
-	background-color: #ffe4c4;
+	background-image:url('../image/wood-texture_00135.jpg');
 }
 
  
@@ -60,11 +60,11 @@
   .btn-flat-simple {
     position: relative;
     display: inline-block;
-    font-weight: bold;
-    padding: 0.25em 0.5em;
+    font-size: bold;
+    padding: 1.5em 3em;
     text-decoration: none;
-    color: #00BCD4;
-    background: #ECECEC;
+    color: #ffffff;
+    background: #00BCD4;
     transition: .4s;
   }
   

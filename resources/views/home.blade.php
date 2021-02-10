@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href='./jissyu3'>{{ __('さっそく始める') }}</a>
+                    <a href='./tuto'>{{ __('さっそく始める') }}</a>
                 </div>
             </div>
         </div>

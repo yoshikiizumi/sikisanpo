@@ -123,7 +123,7 @@
     <?php var_dump($data) ?>
     </pre>-->
     
-    <div id="map" style="height:1300px; width:1000px; top:10%;">
+    <div id="map" style="height:78%; width:50%px; top:10%; left:0%;">
     </div>
 </body>
 

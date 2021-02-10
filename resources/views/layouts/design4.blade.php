@@ -21,10 +21,10 @@
         <label for="menu-btn-check" class="menu-btn"><span></span></label>
       <div class="menu-content">
             <ul>
-                <li><a href="/jissyu3">チュートリアル</a></li>
-                <li><a href="/rewardpage">実績</a></li>
-                <li><a href="/sendpage">写真を送る</a></li>
-                <li><a href="/sendpage">お問い合わせ</a></li>
+                <li><a href="/tuto">チュートリアル</a></li>
+                <li><a href="/reward">実績</a></li>
+                <li><a href="/send">写真を送る</a></li>
+                <li><a href="/contacts">お問い合わせ</a></li>
                 <!--<li><a href={{ route('logout') }} onclick="event.preventDefault<();
                document.getElementById('logout-form').submit();">
                   ログアウト
@@ -273,9 +273,10 @@ html, body {
 
 /*ここまで各ボタン */
 </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
 </head>
 <body>
     <h1>@yield('title')</h1>
@@ -292,7 +293,7 @@ html, body {
 <main>
 
       <ul class="box">
-        <li><a href="./index"><img src="../image/地図案.png"></a></li>
+        <li><a href="./indexa"><img src="../image/地図案.png"></a></li>
         <li><a href="./sendtestpage"> <img src="../image/カメラ案.png"></a>
         </li>
          <li><a href="./image_input"> <img src="../image/アルバム案.png"></a>
