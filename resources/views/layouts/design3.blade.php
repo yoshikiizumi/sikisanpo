@@ -74,7 +74,7 @@ html, body {
 
   .menu-btn {
     position: fixed;
-    top: 70px;
+    top: 10%;
     left: 0px;
     display: flex;
     height: 45px;
