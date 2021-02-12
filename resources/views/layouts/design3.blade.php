@@ -35,8 +35,8 @@
   margin:10px;
   float:left;
   position:fixed;
-  width:55px;
-  height:55px;
+  width:50px;
+  height:50px;
 
   
 }

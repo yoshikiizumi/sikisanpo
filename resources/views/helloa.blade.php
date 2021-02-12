@@ -56,8 +56,8 @@
 
         <?php foreach ($data as $blog) : ?>
             <?php echo "const contentStringid" . $blog->id . " =" ?>
-            <?php echo "'<h1>" . $blog->product_name . "</h1>' +" ?>
-            <?php echo '\'<img src="' . $blog->path . '" width="300" height="300">\';'?>
+            <?php echo "'<h2>" . $blog->product_name . "</h2>' +" ?>
+            <?php echo '\'<img src="' . $blog->path . '" width="130" height="200">\';'?>
         <?php endforeach; ?>
         //上のコードはこの形式のデータを繰り返して作成する
         //const contentStringid68 =
