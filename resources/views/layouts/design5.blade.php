@@ -1,10 +1,20 @@
+<!-- デザイン -->
 <html>
 
+<header>
+<div class="mypage">
+  <a href ="./mypage_2"><img src="../image/人物.png"></a>
+</div>
 
+
+<div class="box3">
+  <p><span style="font-size:1.5em"><?php $user = Auth::user(); ?>{{ $user->name }} </span>さん</p>
+  </div>
+</header>
+
+<head>
 
 <header>
-
-
 
   <div class="hamburger-menu">
         <input type="checkbox" id="menu-btn-check">
@@ -15,11 +25,11 @@
                 <li><a href="/reward">実績</a></li>
                 <li><a href="/send">みんなの地図</a></li>
                 <li><a href="/contacts">お問い合わせ</a></li>
-                <li><a href={{ route('logout') }} onclick="event.preventDefault();
-                 document.getElementById('logout-form').submit();">
+                <!--<li><a href={{ route('logout') }} onclick="event.preventDefault<();
+               document.getElementById('logout-form').submit();">
                   ログアウト
                   </a></li>
-                  <form id='logout-form' action={{ route('logout')}} method="POST" style="display: none;">
+                  <form id='logout-form' action={{ route('logout')}} method="POST" style="display: none;"> -->
                   @csrf
             </ul>  
       </div>
@@ -35,22 +45,18 @@
   margin:10px;
   float:left;
   position:fixed;
-  width:50px;
-  height:50px;
-
   
 }
 
 .box3 {
-  position:fixed;
   display:inline-block;
-  width:130px;
-  padding:0.25em; 0.5em;
-  margin:18px 70px;
+  width:30%;
+  padding:0.5em; 1em;
+  margin:40px 150px;
   font-weight:bold;
   color:#000;
   background:#fff;
-  border:double 3px #7cfc00;
+  border:double 5px #7cfc00;
   border-radius:80px;
 }
 
@@ -59,7 +65,6 @@
   text-align:center;
   margin:0;
   padding:0;
-  font-size:7pt;
 }
 
 
@@ -74,11 +79,11 @@ html, body {
 
   .menu-btn {
     position: fixed;
-    top: 10%;
+    top: 140px;
     left: 0px;
     display: flex;
-    height: 45px;
-    width: 45px;
+    height: 90px;
+    width: 90px;
     justify-content: center;
     align-items: center;
     z-index: 90;
@@ -89,17 +94,17 @@ html, body {
 .menu-btn span:after {
     content: '';
     display: block;
-    height: 2px;
-    width: 10px;
+    height: 3px;
+    width: 30px;
     border-radius: 3px;
     background-color: #ffffff;
     position: absolute;
 }
 .menu-btn span:before {
-    bottom: 4px;
+    bottom: 8px;
 }
 .menu-btn span:after {
-    top: 4px;
+    top: 8px;
 }
 
 #menu-btn-check:checked ~ .menu-btn span {
@@ -124,13 +129,13 @@ html, body {
     width: 40%;
     height:50%;
     position: fixed;
-    top: 10%;
+    top: 8%;
     left: 0;
     z-index: 80;
     background-color: #ffdead;
 }
 .menu-content ul {
-    padding: 25px 0px 0;
+    padding: 70px 0px 0;
 }
 
 .menu-content li{
@@ -146,25 +151,25 @@ html, body {
 .menu-content ul li a {
     display: block;
     width: 100%;
-    font-size: 18px;
+    font-size: 40px;
     font-weight:bold;
     box-sizing: border-box;
     color:#000000;
     text-decoration: none;
-    padding: 20px 30px 20px 0;
+    padding: 50px 60px 50px 0;
     position: relative;
 
 }
 .menu-content ul li a::before {
     content: "";
-    width: 2px;
-    height: 2px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
+    width: 7px;
+    height: 7px;
+    border-top: solid 4px #ffffff;
+    border-right: solid 4px #ffffff;
     transform: rotate(45deg);
     position: absolute;
-    right: 30px;
-    top: 32px;
+    right: 90px;
+    top: 65px;
 }
 
 
@@ -173,7 +178,7 @@ html, body {
     width: 40%;
     height: 50%;
     position: fixed;
-    top: 1;
+    top: 8%;
     left: -100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
     background-color: #ffdead;
@@ -203,15 +208,15 @@ html, body {
     border-bottom:solid 1px #ccc; color:#ccc; }
     tr {margin:20px 0px -30px 0px;}
     th {background-color:#3498db; color:#fff; padding:5px 10px; padding-color:black;}
-    td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:13pt;
+    td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:28pt;
         background-color: white;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all  0.3s ease;
     }
-    table {border-collapse: collapse; width:1390px; text-align:center; margin:10px 8px 10px; table-layout: fixed;}
-    table th, table td {border: solid 1px black;}
+    table {border-collapse: collapse; width:900px; text-align:center; margin:10px -5px 10px; table-layout: fixed;}
+    table th, table td {border: solid 5px #7cfc00; border-radius: 50px;}
     .box1 {padding: 0.5em 0.5em ;margin: 0px 0px; width: auto;  border: solid 3px #000000; }
     .box1 p {margin: 0px 5px 0px -5px; padding: 0; width: auto 10;}
     
@@ -249,35 +254,42 @@ html, body {
   display: flex;
 	flex-wrap:wrap;
   position:fixed;
-  bottom:-1%;
-  left:0%;
+  bottom:0%;
+  left:9%;
 }
 
 .box > li {
-  width: 30%;
+  width: 29%;
 	box-sizing:border-box;
 }
 
 .box li img {
 	max-width:100%; /*画像のはみだしを防ぐ*/
 	height: auto; /*画像の縦横比を維持 */
-  border:solid 1px #250d00; /*枠線*/
+  border:solid 2px #250d00; /*枠線*/
 }
+
+
 
 /*ここまで各ボタン */
 </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
-</head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
+</head>
+<body>
+    <h1>@yield('title')</h1>
+    @section('menubar')
+    <ul>
+    </ul>
+    <hr size="1">
+    <div class="content">
+    @yield('content')
+    </div>
+</body>
 
 <main>
-    <!--  <div class="m">マップ</div> 
-      <div class="c">カメラ</div>
-      <div class="a">アルバム</div> 
-      
-    !-->   
 
       <ul class="box">
         <li><a href="./indexa"><img src="../image/地図案.png"></a></li>
@@ -286,6 +298,6 @@ html, body {
          <li><a href="./image_input"> <img src="../image/アルバム案.png"></a>
         </li>
       </ul>
-    </main>
+</main>
 
 </html>

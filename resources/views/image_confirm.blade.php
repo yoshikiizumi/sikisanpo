@@ -38,18 +38,15 @@
             <td>冬</td>
         @endif
 </tr>
-                <td>緯度</td>
-                <td>{{ $data['latitude'] }}</td>
-            </tr>
-            <tr>
-                <td>経度</td>
-                <td>{{ $data['longitude'] }}</td>
-            </tr>
-            <tr>
+        
                 <td>町名</td>
                 <td>{{ $data['cityName'] }}</td>
             </tr>
         </table>
-        <input type="submit" name="action" value="送信" />
+        <input type="submit" style="width:100px;
+    height:50px;
+    font-size:24pt;"  name="action" value="送信" />
     </form>
+
+   
 @endsection

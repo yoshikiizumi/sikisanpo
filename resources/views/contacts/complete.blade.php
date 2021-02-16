@@ -1,15 +1,12 @@
-@extends('layouts.design')
+@extends('layouts.design5')
 
 @section('content')
-
+@csrf
 <h1>{{ __('送信完了') }}</h1><br>
-お問い合わせありがとうございます。<br>
-フォームの送信は無事完了いたしました。<br>
+<h2>お問い合わせありがとうございます。<br>
+フォームの送信は無事完了いたしました。</h2><br>
 
-<a href="/contacts">戻る</a>
+<a href="/contacts" style="font-size:24pt;">戻る</a>
 
 @endsection
 
-@section('footer')
-copyright 2020 tuyano.
-@endsection

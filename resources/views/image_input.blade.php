@@ -4,7 +4,7 @@
 
 
 
-  .pagination { font-size:10px; }
+  .pagination { font-size:48px; }
   .pagination li { display:inline-block }
   tr th a:link { color:white; }
   tr th a:visited { color:white; }
@@ -88,6 +88,9 @@
   <input type="number" name="longitude" value="2.2" id="longitude" hidden />
   <input type="text" name="cityName" value="Crazy city" id="cityName" hidden />
 
+  <label>はい<input type="radio" value="1"  name="flag"></label>
+  <label>いいえ<input type="radio" value="0"  name="flag"></label>
+  
   <button type="submit" name="confirm" value="send">確認</button>
 </form>
 <table>
@@ -95,7 +98,6 @@
     <option value="/image_input?sort=path">写真</a></th>
     <option value="/image_input?sort=product_name">花の名前</a></th>
     <option value="/image_input?sort=season">季節</a>
-    <option value="/image_input?sort=cityName">町名</a>
   </select>
   <tr>
   <tr>

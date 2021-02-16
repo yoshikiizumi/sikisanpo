@@ -92,7 +92,7 @@ Route::get('reward','App\Http\Controllers\MenuController@index2');
 
 Route::get('send','App\Http\Controllers\MenuController@index3');
 
-Route::get('mypage','App\Http\Controllers\MenuController@index4');
+Route::get('mypage_2','App\Http\Controllers\MenuController@index4');
 
 
 Route::get('index','App\Http\Controllers\MainpageController@index');
@@ -119,3 +119,9 @@ Route::get('/image_search', [ImageController::class, 'search']);
 
 
 Route::get('indexa','App\Http\Controllers\HelloaController@indexa');
+
+
+
+Route::get('/create', [ImageController::class, 'create']);
+
+

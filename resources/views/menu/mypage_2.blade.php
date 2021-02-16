@@ -65,6 +65,16 @@
     
     </style>
 
+<header>
+@csrf
+<div class="mypage">
+<a href ="./mypage_2"><img src="../image/人物.png"></a>
+
+</div>
+<div class="box3">
+<p><span style="font-size:1.5em"><?php $user = Auth::user(); ?>{{ $user->name }} </span>さん</p>
+</div>
+</header>
 <br>
 <br>
 <br>
@@ -73,4 +83,4 @@
 <h3>メールアドレス：<?php $user = Auth::user(); ?>{{ $user->email }}</h3>
 <h3>性別：<?php $user = Auth::user(); ?>{{ $user->seibetu }}</h3>
 <h3>生年月日：<?php $user = Auth::user(); ?>{{ $user->birth }}</h3>
-<h3>現在の称号：散歩初心者</h3>
+<h3>現在の称号： <img src='../image/称号7.png'></h3>

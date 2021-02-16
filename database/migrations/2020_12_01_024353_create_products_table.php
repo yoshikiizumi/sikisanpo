@@ -16,6 +16,7 @@ class CreateProductsTable extends Migration
             $table->decimal('latitude',15,12);
             $table->decimal('longitude',15,12);
             $table->text('cityName');
+            $table->integer('flag');
             $table->timestamps();
         });
     }

@@ -1,7 +1,5 @@
 @extends('layouts.design4')
-<head>
-  <button id="square_btn" onClick="history.back()">戻る</button>
-</head>
+
 <style>
   .pagination { font-size:10px; }
   .pagination li { display:inline-block }
@@ -12,10 +10,7 @@
 </style>
 
 
-@section('menubar')
-  @parent
-  詳細ページ
-@endsection
+
 
 @section('content')
   <table>
@@ -42,6 +37,8 @@
       twitter</a></div></td>
     </tr>
   </table>  
+  <button id="square_btn" style="width:100px;
+    height:50px; font-size:24pt;"  name="action" onClick="history.back()">戻る</button>
 @endsection
 
 

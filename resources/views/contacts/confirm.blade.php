@@ -1,4 +1,4 @@
-@extends('layouts.design')
+@extends('layouts.design5')
 
 @section('content')
 
@@ -18,6 +18,19 @@
     <input name="body" value="{{ $inputs['body'] }}" type="hidden"><br><br>
 
     <button type="submit" name="action" value="back">修正</button>
-    <button type="submit" name="action" value="submit">送信する</button>
+    <button type="submit" name="action" value="submit">送信</button>
 </form>
 @endsection
+
+<style>
+form{
+    position:relative;
+    top:320px;
+    font-size:28pt;
+}
+button{
+    width:100px;
+    height:50px;
+    font-size:24pt;
+}
+</style>

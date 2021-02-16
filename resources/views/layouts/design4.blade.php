@@ -3,7 +3,7 @@
 
 <header>
 <div class="mypage">
-  <a href ="./mypage"><img src="../image/人物.png"></a>
+  <a href ="./mypage_2"><img src="../image/人物.png"></a>
 </div>
 
 
@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="/tuto">チュートリアル</a></li>
                 <li><a href="/reward">実績</a></li>
-                <li><a href="/send">写真を送る</a></li>
+                <li><a href="/send">みんなの地図</a></li>
                 <li><a href="/contacts">お問い合わせ</a></li>
                 <!--<li><a href={{ route('logout') }} onclick="event.preventDefault<();
                document.getElementById('logout-form').submit();">
@@ -178,7 +178,7 @@ html, body {
     width: 40%;
     height: 50%;
     position: fixed;
-    top: 1;
+    top: 8%;
     left: -100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
     background-color: #ffdead;
@@ -208,15 +208,15 @@ html, body {
     border-bottom:solid 1px #ccc; color:#ccc; }
     tr {margin:20px 0px -30px 0px;}
     th {background-color:#3498db; color:#fff; padding:5px 10px; padding-color:black;}
-    td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:13pt;
+    td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:28pt;
         background-color: white;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all  0.3s ease;
     }
-    table {border-collapse: collapse; width:1390px; text-align:center; margin:10px 8px 10px; table-layout: fixed;}
-    table th, table td {border: solid 1px black;}
+    table {border-collapse: collapse; width:900px; text-align:center; margin:10px -5px 10px; table-layout: fixed;}
+    table th, table td {border: solid 5px #7cfc00; border-radius: 50px;}
     .box1 {padding: 0.5em 0.5em ;margin: 0px 0px; width: auto;  border: solid 3px #000000; }
     .box1 p {margin: 0px 5px 0px -5px; padding: 0; width: auto 10;}
     
@@ -294,7 +294,7 @@ html, body {
 
       <ul class="box">
         <li><a href="./indexa"><img src="../image/地図案.png"></a></li>
-        <li><a href="./sendtestpage"> <img src="../image/カメラ案.png"></a>
+        <li><a href="./create"> <img src="../image/カメラ案.png"></a>
         </li>
          <li><a href="./image_input"> <img src="../image/アルバム案.png"></a>
         </li>

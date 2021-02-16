@@ -14,7 +14,7 @@
     <header>
 
     <div class="mypage">
-  <a href ="./mypage_2"><img src="../image/人物.png"></a>
+  <a href ="./mypage"><img src="../image/人物.png"></a>
 
 </div>
     <div class="box3">
@@ -112,6 +112,12 @@
 
 
 
+
+
+
+
+
+
 <body>
     <!--<pre>
     <?php var_dump($data) ?>
@@ -125,6 +131,11 @@
 
 <!-- Google MAP API KEY -->
 <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyA89oXO9CHChzkj06f_00fFBbheW6xDFEU&callback=initMap" async defer></script>
+
+
+
+
+
 
 
 

@@ -1,16 +1,7 @@
 <!-- デザイン -->
 <html>
 
-<header>
-<div class="mypage">
-  <a href ="./mypage"><img src="../image/人物.png"></a>
-</div>
 
-
-<div class="box3">
-  <p><span style="font-size:1.5em"><?php $user = Auth::user(); ?>{{ $user->name }} </span>さん</p>
-  </div>
-</header>
 
 <head>
 
@@ -23,7 +14,7 @@
             <ul>
                 <li><a href="/tuto">チュートリアル</a></li>
                 <li><a href="/reward">実績</a></li>
-                <li><a href="/send">写真を送る</a></li>
+                <li><a href="/send">みんなの地図</a></li>
                 <li><a href="/contacts">お問い合わせ</a></li>
                 <li><a href={{ route('logout') }} onclick="event.preventDefault();
                  document.getElementById('logout-form').submit();">
@@ -176,7 +167,7 @@ html, body {
     width: 40%;
     height: 50%;
     position: fixed;
-    top: 1;
+    top: 8%;
     left: -100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
     background-color: #ffdead;
@@ -250,6 +241,7 @@ html, body {
 
 .box{
   display: flex;
+  left:8%;
 	flex-wrap:wrap;
   position:fixed;
   bottom:0%;

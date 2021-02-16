@@ -60,6 +60,7 @@ class ImageController extends Controller
         $latitude = $post_data['latitude'];
         $longitude = $post_data['longitude'];
         $cityName = $post_data['cityName'];
+        $flag = $post_data['flag'];
 
 
         /**FIRST CODE */
@@ -154,7 +155,8 @@ class ImageController extends Controller
             'season' => $season,
             'latitude' => $latitude,
             'longitude' => $longitude,
-            'cityName' => $cityName
+            'cityName' => $cityName,
+            'flag' => $flag,
         );
 
         //僕はsessionデータがわらないけど、ちゃんと動いている
@@ -181,6 +183,7 @@ class ImageController extends Controller
         $latitude = $data['latitude'];
         $longitude = $data['longitude'];
         $cityName = $data['cityName'];
+        $flag = $data['flag'];
     
         //$this->productcontroller->path = $read_path;
         //$this->productcontroller->product_name = $product_name;
@@ -192,7 +195,8 @@ class ImageController extends Controller
             'season' => $season,
             'latitude' => $latitude,
             'longitude' => $longitude,
-            'cityName' => $cityName
+            'cityName' => $cityName,
+            'flag' => $flag,
         ];
         DB::table('products')->insert($param);
         return redirect('image_input');
@@ -219,6 +223,11 @@ class ImageController extends Controller
             'selects' => $selects,
         ]);
     }
+
+    public function create(Request $request) {
+        return view('create');
+
+}
 
 
 }
