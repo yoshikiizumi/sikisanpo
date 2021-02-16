@@ -277,7 +277,7 @@ html, body {
 
       <ul class="box">
         <li><a href="./indexa"><img src="../image/地図案.png"></a></li>
-        <li><a href="./sendtestpage"> <img src="../image/カメラ案.png"></a>
+        <li><a href="./create"> <img src="../image/カメラ案.png"></a>
         </li>
          <li><a href="./image_input"> <img src="../image/アルバム案.png"></a>
         </li>
