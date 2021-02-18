@@ -1,4 +1,11 @@
 <!-- デザイン -->
+<script>
+
+  function myFunc() {
+    return false;
+}
+</script>
+
 <html>
 
 <header>
@@ -23,13 +30,12 @@
             <ul>
                 <li><a href="/tuto">チュートリアル</a></li>
                 <li><a href="/reward">実績</a></li>
-                <li><a href="/send">みんなの地図</a></li>
+                <li><a href="#"onclick="return myFunc();">みんなの地図</a></li>
                 <li><a href="/contacts">お問い合わせ</a></li>
-                <!--<li><a href={{ route('logout') }} onclick="event.preventDefault<();
-               document.getElementById('logout-form').submit();">
+                <li><a href="#"onclick="return myFunc();">
                   ログアウト
                   </a></li>
-                  <form id='logout-form' action={{ route('logout')}} method="POST" style="display: none;"> -->
+                 
                   @csrf
             </ul>  
       </div>

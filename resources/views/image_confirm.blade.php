@@ -51,9 +51,11 @@
             @endif
             </tr>
         </table>
+        <br>
+        <br>
         <input type="submit" style="width:100px;
     height:50px;
-    font-size:24pt;"  name="action" value="送信" />
+    font-size:28pt;background-color:#ffff7f;border-radius:12px"  name="action" value="送信" />
     </form>
 
    

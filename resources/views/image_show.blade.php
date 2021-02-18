@@ -18,8 +18,11 @@
 
 
 
-
 @section('content')
+<br>
+<br>
+<br>
+<br>
   <table>
     @csrf
     <input type="hidden" name="id" value="{{$item->id}}">
