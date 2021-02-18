@@ -10,7 +10,7 @@
       <div class="swiper-slide"><img src="image/s1.png" alt=""></div>
       <div class="swiper-slide"><img src="image/s2.png" alt=""></div>
       <div class="swiper-slide"><img src="image/s3.png" alt=""></div>
-      <div class="swiper-slide"><img src="image/s4.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/s41.png" alt=""></div>
     </div>
     <div class="swiper-pagination swiper-pagination-black"></div>
     <div class="swiper-button-prev"></div>
@@ -47,7 +47,7 @@ var mySwiper = new Swiper('.swiper-container', {
 </div>
 <div style="margin-bottom:35px"></div>
 <div style="text-align: center;">
-<a href="/indexa" class="btn-flat-simple">マップ画面へ</a>
+<a href="/indexa" class="btn-flat-simple"style="font-size:20;">マップ画面へ</a>
 </div>
     </body>
     <html>

@@ -15,6 +15,11 @@
 @endsection
 
 @section('content')
+<br>
+<br>
+<br>
+<br>
+<br>
     <form action="image_input" method="post">
         @csrf
         <table border="1">
@@ -53,9 +58,9 @@
         </table>
         <br>
         <br>
-        <input type="submit" style="width:100px;
-    height:50px;
-    font-size:28pt;background-color:#ffff7f;border-radius:12px"  name="action" value="送信" />
+        <input type="submit" style="width:200px;
+    height:100px;
+    font-size:36pt;background-color:#ffff7f;border-radius:12px"  name="action" value="送信" />
     </form>
 
    
