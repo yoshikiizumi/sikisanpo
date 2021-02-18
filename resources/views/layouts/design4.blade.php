@@ -207,13 +207,14 @@ html, body {
     .footer { text-align:right; font-size:10pt; margin:10px;
     border-bottom:solid 1px #ccc; color:#ccc; }
     tr {margin:20px 0px -30px 0px;}
-    th {background-color:#3498db; color:#fff; padding:5px 10px; padding-color:black;}
+    th {background-color:#3498db; color:#fff; padding:5px 10px; padding-color:black;font-size:30pt;}
     td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:28pt;
-        background-color: white;
+        background-color: #fffacd;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all  0.3s ease;
+    
     }
     table {border-collapse: collapse; width:900px; text-align:center; margin:10px -5px 10px; table-layout: fixed;}
     table th, table td {border: solid 5px #7cfc00; border-radius: 50px;}

@@ -26,90 +26,91 @@
 </head>
 
 
-<script>
+    <script>
 
 
     function initMap() {
 
-        <?php foreach ($data as $blog) : ?>
-            <?php echo "const id" . $blog->id . " = {" ?>
-            <?php echo "lat: " . $blog->latitude . "," ?>
-            <?php echo "lng: " . $blog->longitude ?>
-            <?php echo "};" ?>
-        <?php endforeach; ?>
-        //上のコードはこの形式のデータを繰り返して作成する
-        //const id68 = {
-        //    lat: 36.363,
-        //    lng: 138.044
-        //};
+            let tokyo = {lat:35.658,lng:139.745}
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: tokyo,
+            });
 
 
+            <?php foreach ($data as $blog) : ?>
+            <?php if ($data['flag'] == 1) : ?>
+                <?php echo "const id" . $blog->id . " = {" ?>
+                <?php echo "lat: " . $blog->latitude . "," ?>
+                <?php echo "lng: " . $blog->longitude ?>
+                <?php echo "};" ?>
+            <?php endif; ?>
+            <?php endforeach; ?>
+            //上のコードはこの形式のデータを繰り返して作成する
+            //const id68 = {
+            //    lat: 36.363,
+            //    lng: 138.044
+            //};
 
 
-        let tokyo = {lat:35.658,lng:139.745}
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 10,
-            center: tokyo,
-        });
-        
-
-
-        <?php foreach ($data as $blog) : ?>
-            <?php echo "const contentStringid" . $blog->id . " =" ?>
             
-            <?php echo '\'<img src="' . $blog->path . '" width="130" height="180">\';'?>
-        <?php endforeach; ?>
-        //上のコードはこの形式のデータを繰り返して作成する
-        //const contentStringid68 =
-        //    '<h1>はっちゃん</h1>' +
-        //    '<img src="storage/productimage/g9NJ4ClwzSGidC61eEtuyR9RuD3RboYUbJiQi9xO.jpg" width="200" height="200">';
-        
-        
 
 
-        <?php foreach ($data as $blog) : ?>
-            <?php echo "const infowindowid" . $blog->id . " = new google.maps.InfoWindow({" ?>
-            <?php echo "content: contentStringid" . $blog->id . "," ?>
-            <?php echo "});" ?>
-        <?php endforeach; ?>
-        //上のコードはこの形式のデータを繰り返して作成する
-        //const infowindowid68 = new google.maps.InfoWindow({
-        //    content: contentStringid68,
-        //});
-        
+            <?php foreach ($data as $blog) : ?>
+                <?php echo "const contentStringid" . $blog->id . " =" ?>
+                
+                <?php echo '\'<img src="' . $blog->path . '" width="130" height="180">\';'?>
+            <?php endforeach; ?>
+            //上のコードはこの形式のデータを繰り返して作成する
+            //const contentStringid68 =
+            //    '<h1>はっちゃん</h1>' +
+            //    '<img src="storage/productimage/g9NJ4ClwzSGidC61eEtuyR9RuD3RboYUbJiQi9xO.jpg" width="200" height="200">';
+            
+            
 
-        
-    
 
-        <?php foreach ($data as $blog) : ?>
-            <?php echo "const markerid" . $blog->id . " = new google.maps.Marker({" ?>
-            <?php echo "position: id" . $blog->id . "," ?>
-            <?php echo "map,"?>
-            <?php echo "title: \"これは何かわからないけどいったんのこします\","?>
-            <?php echo "});" ?>
-        <?php endforeach; ?>
-        //上のコードはこの形式のデータを繰り返して作成する
-        //const markerid68 = new google.maps.Marker({
-        //    position: id68,
-        //    map,
-        //    title: "これは何かわからないけどいったん残します",
-        //});
+            <?php foreach ($data as $blog) : ?>
+                <?php echo "const infowindowid" . $blog->id . " = new google.maps.InfoWindow({" ?>
+                <?php echo "content: contentStringid" . $blog->id . "," ?>
+                <?php echo "});" ?>
+            <?php endforeach; ?>
+            //上のコードはこの形式のデータを繰り返して作成する
+            //const infowindowid68 = new google.maps.InfoWindow({
+            //    content: contentStringid68,
+            //});
+            
 
+            
         
-        
-        <?php foreach ($data as $blog) : ?>
-            <?php echo "markerid" . $blog->id . ".addListener(\"click\", () => {" ?>
-            <?php echo "infowindowid" . $blog->id . ".open(map, markerid" . $blog->id . ");" ?>
-            <?php echo "});"?>
-        <?php endforeach; ?>
-        //上のコードはこの形式のデータを繰り返して作成する
-        //markerid68.addListener("click", () => {
-        //    infowindowid68.open(map, markerid68);
-        //});
-        
+            <?php foreach ($data as $blog) : ?>
+                <?php echo "const markerid" . $blog->id . " = new google.maps.Marker({" ?>
+                <?php echo "position: id" . $blog->id . "," ?>
+                <?php echo "map,"?>
+                <?php echo "title: \"これは何かわからないけどいったんのこします\","?>
+                <?php echo "});" ?>
+            <?php endforeach; ?>
+            //上のコードはこの形式のデータを繰り返して作成する
+            //const markerid68 = new google.maps.Marker({
+            //    position: id68,
+            //    map,
+            //    title: "これは何かわからないけどいったん残します",
+            //});
+
+            
+            
+            <?php foreach ($data as $blog) : ?>
+                <?php echo "markerid" . $blog->id . ".addListener(\"click\", () => {" ?>
+                <?php echo "infowindowid" . $blog->id . ".open(map, markerid" . $blog->id . ");" ?>
+                <?php echo "});"?>
+            <?php endforeach; ?>
+            //上のコードはこの形式のデータを繰り返して作成する
+            //markerid68.addListener("click", () => {
+            //    infowindowid68.open(map, markerid68);
+         
+            //});
     }
-</script>
-
+    </script>
+@endif
 
 
 

@@ -27,20 +27,28 @@
                 <td>{{ $data['product_name'] }}</td>
             </tr>
             <tr>
-   <td>季節</td>
-   	@if($data['season'] == 0)
-            <td>春</td>
-        @elseif($data['season'] == 1)
-            <td>夏</td>
-        @elseif($data['season'] == 2)
-            <td>秋</td>
-        @else
-            <td>冬</td>
-        @endif
-</tr>
-        
+            <td>季節</td>
+                @if($data['season'] == 0)
+                        <td>春</td>
+                    @elseif($data['season'] == 1)
+                        <td>夏</td>
+                    @elseif($data['season'] == 2)
+                        <td>秋</td>
+                    @else
+                        <td>冬</td>
+                    @endif
+            </tr>
+            <tr>       
                 <td>町名</td>
                 <td>{{ $data['cityName'] }}</td>
+            </tr>
+            <tr>
+            <td>表示</td>
+            @if ($data['flag'] == 1)
+                <td>表示する</td>
+            @else
+                <td>表示しない</td>
+            @endif
             </tr>
         </table>
         <input type="submit" style="width:100px;

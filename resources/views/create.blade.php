@@ -39,11 +39,13 @@
   <input type="number" name="longitude" value="2.2" id="longitude" hidden />
   <input type="text" name="cityName" value="Crazy city" id="cityName" hidden />
 
-  <label>はい<input type="radio" value="1"  name="flag"></label>
+  公開する:
+  <label>はい<input type="radio" value="1"  name="flag"checked></label>
   <label>いいえ<input type="radio" value="0"  name="flag"></label>
   
 
-    <br><input type="submit" name="confirm" id="button" value="確認" />
+    <br>
+    <br><input type="submit" name="confirm" id="button" value="アルバムに登録する" style="font-size:18pt; background-color:#ffd700; border-radius:12px"　 />
   </form>
 
 <script>
@@ -60,7 +62,7 @@
 
         //--画像が読み込まれた時の動作を記述
         reader.onload = function (ev) {
-            $('#img_prv').attr('src', ev.target.result).css('width', '250px').css('height', '200px');
+            $('#img_prv').attr('src', ev.target.result).css('width', '200px').css('height', '150px');
         }
         reader.readAsDataURL(this.files[0]);
     })
@@ -73,11 +75,14 @@
 
 label{
   color:black;
-  background-color:#f0f8ff;
+  background-color:white;
   padding:6px;
-  border-radius:12px;
-  font-size:24pt;
+  font-size:20pt;
+}
+.content{
   position:relative;
+  top:5%;
+  zoom:2;
 }
 
 </style>

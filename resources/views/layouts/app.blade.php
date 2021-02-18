@@ -19,6 +19,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<style>
+li{
+    list-style: none;
+}
+</style>
 <body>
     <div id="app">
             <div class="container">
