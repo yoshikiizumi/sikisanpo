@@ -49,7 +49,6 @@
 }
 
 .box3 {
-  position:fixed;
   display:inline-block;
   width:30%;
   padding:0.5em; 1em;
